@@ -1,91 +1,69 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Month Calendar</title>
-</head>
-<body>
-    <nav>
-        <a href="home.html"><button>Home</button></a>
-        <a href="courses.html"><button>Courses</button></a>
-        <a href="monthly_Cal.html"><button>Calendar</button></a>
-        <a href="https://b2b0c970-8c97-44e8-bc56-a029b47c90c1.iad.login.instructure.com/?goto=https%3A%2F%2Fb2b0c970-8c97-44e8-bc56-a029b47c90c1.iad.login.instructure.com%2Fam%2Foauth2%2Falpha%2Fauthorize%3Fauthentication_provider%3D79175795-479a-4154-8335-43264065b1fb%26client_id%3Dcanvas-prod-iad%26nonce%3Db50a6a9609bfb5e8cb6be7d793be7d9bc577c262027e36fe%26org_id%3Db2b0c970-8c97-44e8-bc56-a029b47c90c1%26redirect_uri%3Dhttps%3A%2F%2Fsso.canvaslms.com%2Flogin%2Foauth2%2Fcallback%26response_type%3Dcode%26scope%3Dopenid%2520profile%2520email%26state%3DeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhYWNfaWQiOjcwMDAwMDAwMDAxNzUyLCJub25jZSI6ImI1MGE2YTk2MDliZmI1ZThjYjZiZTdkNzkzYmU3ZDliYzU3N2MyNjIwMjdlMzZmZSIsImhvc3QiOiJjYW52YXMuaW5zdHJ1Y3R1cmUuY29tIiwidGFyZ2V0X2F1dGhfcHJvdmlkZXIiOiI3OTE3NTc5NS00NzlhLTQxNTQtODMzNS00MzI2NDA2NWIxZmIiLCJleHAiOjE3NjEzNjA2NDN9.0nan3uLJiSH1V3565L-utH4GSpuOH6An7_x-sVtQZsM%26target_domain%3Dhttps%3A%2F%2Fcanvas.instructure.com&realm=/alpha"><button>Canvas</button></a>
-        <input type="text" placeholder="Search">
-        <a href="settings.html"><button>Settings</button></a>
-    </nav>
-    
-    <div class="Calendar"></div>
+{% extends "base.html" %}
 
-    <h1> October 2025</h1>
-    <table border="5" style="width:50%">
-        <tr>
-            <th>Sun</th>
-            <th>Mon</th>
-            <th>Tue</th>
-            <th>Wed</th>
-            <th>Thu</th>
-            <th>Fri</th>
-            <th>Sat</th> 
-        </tr>
-        <tr>
-            <td><p></p></td>
-            <td><p></p></td>
-            <td><p></p></td>
-            <td>1 <p></p></td>
-            <td>2 <p></p>  </td>
-            <td>3 <p></p> </td>
-            <td>4 <p></p> </td>
-        </tr>
-        <tr>
-            <td>5 <p></p> </td>
-            <td>6 <p></p> </td>
-            <td>7 <p></p> </td>
-            <td>8 <p></p> </td>
-            <td>9 <p></p> </td>
-            <td>10 <p></p> </td>
-            <td>11 <p></p> </td>
-        </tr>                   
-    
-        <tr>
-            <td>12 <p></p> </td>
-            <td>13 <p></p> </td>
-            <td>14 <p></p> </td>
-            <td>15 <p></p> </td>
-            <td>16 <p></p> </td>
-            <td>17 <p></p> </td>
-            <td>18 <p></p> </td>
-        </tr>
-        <tr>
-            <td>19 <p></p> </td>
-            <td>20 <p></p> </td>
-            <td>21 <p></p> </td>
-            <td>22 <p></p> </td>
-            <td>23 <p></p> </td>
-            <td>24 <p></p> </td>
-            <td>25 <p></p> </td>
-            
-        </tr>
-        <tr>
-            <td>26 <p></p> </td>  
-            <td>27 <p></p> </td>
-            <td>28 <p></p> </td>
-            <td>29 <p></p> </td>
-            <td>30 <p></p> </td>
-            <td>31 <p></p> </td>
-            <td> <p></p> </td>
-            <td> <p></p> </td>
-    </table>
-    <footer>
-        <p>Created by: ___, ___, ____, ____</p>
-        <a href="home.html">Home</a>
-        <a href="monthly_Cal.html">Calendar</a>
-        <a href="courses.html">Courses</a>
-        <a href="settings.html">Settings</a>
-    </footer>
-</body>
-</html>
+{% block body %}
+<div class="Calendar"></div>
 
+<h1> October 2025</h1>
+<table border="5" style="width:50%">
+    <tr>
+        <th>Sun</th>
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th>Sat</th> 
+    </tr>
+    <tr>
+        <td><p></p></td>
+        <td><p></p></td>
+        <td><p></p></td>
+        <td>1 <p></p></td>
+        <td>2 <p></p>  </td>
+        <td>3 <p></p> </td>
+        <td>4 <p></p> </td>
+    </tr>
+    <tr>
+        <td>5 <p></p> </td>
+        <td>6 <p></p> </td>
+        <td>7 <p></p> </td>
+        <td>8 <p></p> </td>
+        <td>9 <p></p> </td>
+        <td>10 <p></p> </td>
+        <td>11 <p></p> </td>
+    </tr>                   
+
+    <tr>
+        <td>12 <p></p> </td>
+        <td>13 <p></p> </td>
+        <td>14 <p></p> </td>
+        <td>15 <p></p> </td>
+        <td>16 <p></p> </td>
+        <td>17 <p></p> </td>
+        <td>18 <p></p> </td>
+    </tr>
+    <tr>
+        <td>19 <p></p> </td>
+        <td>20 <p></p> </td>
+        <td>21 <p></p> </td>
+        <td>22 <p></p> </td>
+        <td>23 <p></p> </td>
+        <td>24 <p></p> </td>
+        <td>25 <p></p> </td>
+        
+    </tr>
+    <tr>
+        <td>26 <p></p> </td>  
+        <td>27 <p></p> </td>
+        <td>28 <p></p> </td>
+        <td>29 <p></p> </td>
+        <td>30 <p></p> </td>
+        <td>31 <p></p> </td>
+        <td> <p></p> </td>
+        <td> <p></p> </td>
+</table>
+
+{% endblock %}
 
 
 
