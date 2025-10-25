@@ -1,66 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canvas Seer</title>
-</head>
-<body>
-   {% extends "nav.html" %}
-    <!--Info in Canvas API for getting announcements-->
-    <!--url:GET|/api/v1/announcements-->
-    <section id="announcements">
-        <h2>Announcements</h2>
-    </section>
+{% extends "base.html" %} 
 
-    <!--info in Canvas API for getting student courses-->
-    <!--url:GET|/api/v1/courses
+
+{% block body %}
+<!--Info in Canvas API for getting announcements-->
+<!--url:GET|/api/v1/announcements-->
+<section id="announcements">
+    <h2>Announcements</h2>
+</section>
+
+<!--info in Canvas API for getting student courses-->
+<!--url:GET|/api/v1/courses
     enrollment_type Student-->
-    <section id="courses">
-        <h2>Courses</h2>
-        <figure class="course">
-            <img src="https://picsum.photos/200/200" alt="course 1 image">
-            <p>course 1</p>
-        </figure>
-        <figure class="course">
-            <img src="https://picsum.photos/200/200" alt="course 1 image">
-            <p>course 2</p>
-        </figure>
-        <figure class="course">
-            <img src="https://picsum.photos/200/200" alt="course 1 image">
-            <p>course 3</p>
-        </figure>
-        <figure class="course">
-            <img src="https://picsum.photos/200/200" alt="course 1 image">
-            <p>course 4</p>
-        </figure>
-        <figure class="course">
-            <img src="https://picsum.photos/200/200" alt="course 1 image">
-            <p>course 5</p>
-        </figure>
-        <figure class="course">
-            <img src="https://picsum.photos/200/200" alt="course 1 image">
-            <p>course 6</p>
-        </figure>
-        <figure class="course">
-            <img src="https://picsum.photos/200/200" alt="course 1 image">
-            <p>course 7</p>
-        </figure>
-        <figure class="course">
-            <img src="https://picsum.photos/200/200" alt="course 1 image">
-            <p>course 8</p>
-        </figure>
-        <figure class="course">
-            <img src="https://picsum.photos/200/200" alt="course 1 image">
-            <p>course 9</p>
-        </figure>
-    </section>
-    <footer>
-        <p>Created by: ___, ___, ____, ____</p>
-        <a href="home.html">Home</a>
-        <a href="monthly_Cal.html">Calendar</a>
-        <a href="courses.html">Courses</a>
-        <a href="settings.html">Settings</a>
-    </footer>
-</body>
-</html>
+<section id="courses">
+    <h2>Courses</h2>
+    <figure class="course">
+        <img src="https://picsum.photos/200/200" alt="course 1 image">
+        <p>course 1</p>
+    </figure>
+    <figure class="course">
+        <img src="https://picsum.photos/200/200" alt="course 1 image">
+        <p>course 2</p>
+    </figure>
+    <figure class="course">
+        <img src="https://picsum.photos/200/200" alt="course 1 image">
+        <p>course 3</p>
+    </figure>
+    <figure class="course">
+        <img src="https://picsum.photos/200/200" alt="course 1 image">
+        <p>course 4</p>
+    </figure>
+    <figure class="course">
+        <img src="https://picsum.photos/200/200" alt="course 1 image">
+        <p>course 5</p>
+    </figure>
+    <figure class="course">
+        <img src="https://picsum.photos/200/200" alt="course 1 image">
+        <p>course 6</p>
+    </figure>
+    <figure class="course">
+        <img src="https://picsum.photos/200/200" alt="course 1 image">
+        <p>course 7</p>
+    </figure>
+    <figure class="course">
+        <img src="https://picsum.photos/200/200" alt="course 1 image">
+        <p>course 8</p>
+    </figure>
+    <figure class="course">
+        <img src="https://picsum.photos/200/200" alt="course 1 image">
+        <p>course 9</p>
+    </figure>
+</section>
+{% endblock %}

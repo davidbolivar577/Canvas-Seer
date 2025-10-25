@@ -41,9 +41,6 @@ def calendar():
 def courses():
     return render_template("courses.html")
 
-@views.route('/temp_home')
-def temphome():
-    return render_template("home_template.html")
 
 
 """
