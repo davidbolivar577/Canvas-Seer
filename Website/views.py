@@ -4,11 +4,38 @@ views = Blueprint('views', __name__)
 
 @views.route('/')
 def home():
-    return render_template("home.html")
+    return redirect(url_for('/home'))
 
+#todo #6
 @views.route('/home')
 def home2():
-    return redirect(url_for('/'))
+    return render_template("home.html")
+
+@views.route('/login')
+def login(login_status):
+    #if logged in
+    if (login_status):
+        return redirect(url_for('home.html'))
+    return render_template("login_page.html")
+
+@views.route('/signup')
+def signup():
+    #if logged in
+    return render_template("sign_up.html")
+
+@views.route('/logout')
+def logout(login_status):
+    if (login_status):
+        return redirect(url_for('home.html'))
+    return render_template("logout.html")
+
+@views.route('/settings')
+def settings():
+    return render_template("settings.html")
+
+@views.route('/calendar')
+def calendar():
+    return render_template("calendar.html")
 
 """
 @views.route('/home')
