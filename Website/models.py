@@ -17,4 +17,4 @@ class User(db.Model, UserMixin):
     password = db.Column(db.String(100))
     first_name = db.Column(db.String(100))
     last_name = db.Column(db.String(100))
-    access_key = db.Column(db.Integer)
+    apikey = db.Column(db.String(100))
