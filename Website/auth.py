@@ -36,7 +36,7 @@ def login():
 @login_required
 def logout():
     logout_user()
-    return redirect(url_for('auth.login'))
+    return render_template('logout.html')
 
 
 @auth.route('/signup', methods=['GET', 'POST'])
@@ -61,7 +61,7 @@ def sign_up():
             flash('Password must be at least 7 characters.', category='error')
         else:
             new_user = User(access_key = apikey, email=email, first_name = first_name, password=generate_password_hash(
-                password1, method='sha256'))
+                password1, method='scrypt'))
             db.session.add(new_user)
             db.session.commit()
             login_user(new_user, remember=True)
