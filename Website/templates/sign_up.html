@@ -4,6 +4,33 @@
   <h3 align="center">Sign Up</h3>
 
   <div class="form-group">
+    <div class="api-dropdown">
+      <button class="api-button">How to get API Key</button>
+      <div class="api-dropdown-items">
+        <ul>
+          <li>
+            <p>Go to this </p>
+            <a href="https://byui.instructure.com/profile/settings">link.</a>
+          </li>
+          <li>
+            <p>Click the blue "New Access Token"</p>
+          </li>
+          <li>
+            <p>Fill out the form that appears with the experation date being as far out as possible.</p>
+          </li>
+          <li>
+            <p>Click Generate Token</p>
+          </li>
+          <li>
+            <p>Make sure to save the Token somewhere safe!</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <label for="APIKey">API Key</label>
+  </div>
+
+  <div class="form-group">
     <label for="Email">Email Address</label>
     <input type="email" class="form-control" id="Email"
            name="email" placeholder="Enter email" required>
