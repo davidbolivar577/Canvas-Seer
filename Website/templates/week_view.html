@@ -1,72 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weekly Calendar</title>
-</head>
-<body>
-    <nav>
-        <a href="home.html"><button>Home</button></a>
-        <a href="courses.html"><button>Courses</button></a>
-        <a href="monthly_Cal.html"><button>Calendar</button></a>
-        <a href="https://b2b0c970-8c97-44e8-bc56-a029b47c90c1.iad.login.instructure.com/?goto=https%3A%2F%2Fb2b0c970-8c97-44e8-bc56-a029b47c90c1.iad.login.instructure.com%2Fam%2Foauth2%2Falpha%2Fauthorize%3Fauthentication_provider%3D79175795-479a-4154-8335-43264065b1fb%26client_id%3Dcanvas-prod-iad%26nonce%3Db50a6a9609bfb5e8cb6be7d793be7d9bc577c262027e36fe%26org_id%3Db2b0c970-8c97-44e8-bc56-a029b47c90c1%26redirect_uri%3Dhttps%3A%2F%2Fsso.canvaslms.com%2Flogin%2Foauth2%2Fcallback%26response_type%3Dcode%26scope%3Dopenid%2520profile%2520email%26state%3DeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhYWNfaWQiOjcwMDAwMDAwMDAxNzUyLCJub25jZSI6ImI1MGE2YTk2MDliZmI1ZThjYjZiZTdkNzkzYmU3ZDliYzU3N2MyNjIwMjdlMzZmZSIsImhvc3QiOiJjYW52YXMuaW5zdHJ1Y3R1cmUuY29tIiwidGFyZ2V0X2F1dGhfcHJvdmlkZXIiOiI3OTE3NTc5NS00NzlhLTQxNTQtODMzNS00MzI2NDA2NWIxZmIiLCJleHAiOjE3NjEzNjA2NDN9.0nan3uLJiSH1V3565L-utH4GSpuOH6An7_x-sVtQZsM%26target_domain%3Dhttps%3A%2F%2Fcanvas.instructure.com&realm=/alpha"><button>Canvas</button></a>
-        <input type="text" placeholder="Search">
-        <a href="settings.html"><button>Settings</button></a>
-    </nav>
+{% extends "base.html" %}
 
-  <table border="1">
-    <thead>
-      <tr>
-        <th>all-day</th>
-        <th>Sun 10/19</th>
-        <th>Mon 10/20</th>
-        <th>Tue 10/21</th>
-        <th>Wed 10/22</th>
-        <th>Thu 10/23</th>
-        <th>Fri 10/24</th>
-        <th>Sat 10/25</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>12am</td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-      </tr>
-      <tr>
-        <td>1am</td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-      </tr>
-      <tr>
-        <td>2am</td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-      </tr>
-      <tr>
-        <td>3am</td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-      </tr>
-      <tr>
-        <td>4am</td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-      </tr>
-      <tr>
-        <td>5am</td>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-      </tr>
-      <tr>
-        <td>12:30pm</td>
-        <td></td><td></td><td></td><td></td><td></td>
-        <td></td><td></td><td></td><td></td><td></td>
-        <td></td><td></td><td></td><td></td><td></td>
-      </tr>
-    </tbody>
-  </table>
-  <footer>
-        <p>Created by: ___, ___, ____, ____</p>
-        <a href="home.html">Home</a>
-        <a href="monthly_Cal.html">Calendar</a>
-        <a href="courses.html">Courses</a>
-        <a href="settings.html">Settings</a>
-    </footer>
-</body>
-</html>
+
+{% block body %}
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>all-day</th>
+      <th>Sun 10/19</th>
+      <th>Mon 10/20</th>
+      <th>Tue 10/21</th>
+      <th>Wed 10/22</th>
+      <th>Thu 10/23</th>
+      <th>Fri 10/24</th>
+      <th>Sat 10/25</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>12am</td>
+      <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <td>1am</td>
+      <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <td>2am</td>
+      <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <td>3am</td>
+      <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <td>4am</td>
+      <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <td>5am</td>
+      <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <td>12:30pm</td>
+      <td></td><td></td><td></td><td></td><td></td>
+      <td></td><td></td><td></td><td></td><td></td>
+      <td></td><td></td><td></td><td></td><td></td>
+    </tr>
+  </tbody>
+</table>
+
+{% endblock %}
