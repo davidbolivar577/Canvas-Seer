@@ -1,56 +1,62 @@
-{% extends "base.html" %} 
+{% extends "base.html" %}
 
 {% block title %}Canvas Seer{% endblock %}
 
-{% block style %}<link href="{{ url_for('static', filename='styles/styles_home.css') }}" rel="stylesheet" />{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/styles_home.css') }}">
+{% endblock %}
 
 {% block body %}
-<!--Info in Canvas API for getting announcements-->
-<!--url:GET|/api/v1/announcements-->
+<!-- Info in Canvas API for getting announcements -->
+<!-- url: GET | /api/v1/announcements -->
+<h1>Welcome to Canvas Seer</h1>
+
 <section id="announcements">
     <h2>Announcements</h2>
 </section>
 
-<!--info in Canvas API for getting student courses-->
-<!--url:GET|/api/v1/courses
-    enrollment_type Student-->
+<!-- Info in Canvas API for getting student courses -->
+<!-- url: GET | /api/v1/courses  enrollment_type=Student -->
 <section id="courses">
     <h2>Courses</h2>
-    <figure class="course">
-        <img src="https://picsum.photos/200/200" alt="course 1 image">
-        <p>course 1</p>
-    </figure>
-    <figure class="course">
-        <img src="https://picsum.photos/200/200" alt="course 1 image">
-        <p>course 2</p>
-    </figure>
-    <figure class="course">
-        <img src="https://picsum.photos/200/200" alt="course 1 image">
-        <p>course 3</p>
-    </figure>
-    <figure class="course">
-        <img src="https://picsum.photos/200/200" alt="course 1 image">
-        <p>course 4</p>
-    </figure>
-    <figure class="course">
-        <img src="https://picsum.photos/200/200" alt="course 1 image">
-        <p>course 5</p>
-    </figure>
-    <figure class="course">
-        <img src="https://picsum.photos/200/200" alt="course 1 image">
-        <p>course 6</p>
-    </figure>
-    <figure class="course">
-        <img src="https://picsum.photos/200/200" alt="course 1 image">
-        <p>course 7</p>
-    </figure>
-    <figure class="course">
-        <img src="https://picsum.photos/200/200" alt="course 1 image">
-        <p>course 8</p>
-    </figure>
-    <figure class="course">
-        <img src="https://picsum.photos/200/200" alt="course 1 image">
-        <p>course 9</p>
-    </figure>
+
+    <div id="course_container">
+        <figure class="course">
+            <img src="https://picsum.photos/200/200" alt="course 1 image">
+            <p>Course 1</p>
+        </figure>
+        <figure class="course">
+            <img src="https://picsum.photos/200/200" alt="course 2 image">
+            <p>Course 2</p>
+        </figure>
+        <figure class="course">
+            <img src="https://picsum.photos/200/200" alt="course 3 image">
+            <p>Course 3</p>
+        </figure>
+        <figure class="course">
+            <img src="https://picsum.photos/200/200" alt="course 4 image">
+            <p>Course 4</p>
+        </figure>
+        <figure class="course">
+            <img src="https://picsum.photos/200/200" alt="course 5 image">
+            <p>Course 5</p>
+        </figure>
+        <figure class="course">
+            <img src="https://picsum.photos/200/200" alt="course 6 image">
+            <p>Course 6</p>
+        </figure>
+        <figure class="course">
+            <img src="https://picsum.photos/200/200" alt="course 7 image">
+            <p>Course 7</p>
+        </figure>
+        <figure class="course">
+            <img src="https://picsum.photos/200/200" alt="course 8 image">
+            <p>Course 8</p>
+        </figure>
+        <figure class="course">
+            <img src="https://picsum.photos/200/200" alt="course 9 image">
+            <p>Course 9</p>
+        </figure>
+    </div>
 </section>
 {% endblock %}

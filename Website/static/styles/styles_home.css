@@ -1,15 +1,45 @@
 @import "styles.css";
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    background-color: #f0f2f5;
-    font-family: Arial, Helvetica, sans-serif;
-    color: red;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* debug*/
+body {
+  background-color: #f0f2f5;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000;
+}
 
+#course_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.course {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  text-align: center;
+  padding: 10px;
+  transition: transform 0.2s ease;
+}
+
+.course:hover {
+  transform: scale(1.05);
+}
+
+.course img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+h2 {
+  text-align: center;
+  margin: 20px 0;
+}

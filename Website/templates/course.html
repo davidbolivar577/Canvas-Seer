@@ -4,6 +4,8 @@
 
 {% block body %}
 
+{% block style %}<link rel="stylesheet" href="{{ url_for('static', filename='styles/styles_course.css') }}">{% endblock %}
+
 <label for="official-view">Official View</label>
 <input type="checkbox" id="official-view" name="official-view" value="official-view">
     
