@@ -1,5 +1,8 @@
 {% extends "base.html" %} 
 
+{% block title %}Canvas Seer{% endblock %}
+
+{% block style %}<link rel="stylesheet" href="{{ url_for('static', filename='styles/styles_home.css') }}">{% endblock %}
 
 {% block body %}
 <!--Info in Canvas API for getting announcements-->
