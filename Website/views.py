@@ -33,15 +33,33 @@ def logout(login_status):
 def settings():
     return render_template("settings.html")
 
-@views.route('/calendar')
+@views.route('/calendar/')
 def calendar():
     return render_template("calendar.html")
+
+@views.route('/calendar/monthly')
+def calM():
+    return render_template("calendarMonthly.html")
+
+@views.route('/calendar/weekly')
+def calW():
+    return render_template("calendarWeekly.html")
+
+@views.route('/calendar/list')
+def calL():
+    return render_template("calendarList.html")
 
 @views.route('/courses')
 def courses():
     return render_template("courses.html")
 
+@views.route('/courses/?')
+def courseNum(course_number):
+    return render_template(url_for('courses/?',values=course_number))
 
+@views.route('/courses/?/??')
+def module():
+    return render_template("courses/?/??.html")
 
 """
 @views.route('/home')
