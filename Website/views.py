@@ -7,18 +7,15 @@ login_status = False
 
 @views.route('/', methods=['GET', 'POST'])
 @login_required
-
-
-@views.route('/')
 def root():
     return redirect(url_for('views.home'))
     
 
-'''
+
 @views.route('/home')
 def home():
     return render_template("home.html")
-'''
+
 @views.route('/login')
 def login():
     #if logged in

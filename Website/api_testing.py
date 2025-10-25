@@ -1,7 +1,8 @@
-
+'''
 import requests
 import subprocess
 import json
+
 
 #debug
 import pprint
@@ -19,11 +20,14 @@ def get_grade_info():
 
     if response.status_code == 200:
         test_data = response.json()
-        print(type(test_data[1]))
+        print(list(test_data[1].keys()))
+        courseList = []
         for course in test_data:
             name = course["name"]
             id = course["id"]
             
+            courseList.append([name, id])
+        pprint.pprint(courseList)
         #pprint.pprint(test_data) 
         #while():
 
@@ -36,3 +40,4 @@ def get_grade_info():
 
 get_grade_info()
 
+'''
