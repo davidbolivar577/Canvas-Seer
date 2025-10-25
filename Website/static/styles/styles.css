@@ -21,3 +21,49 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     align-items: center;
 }
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 1em;
+    overflow: hidden;
+    background-color: #0076c6;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    font-size: 1.5em;
+}
+
+nav ul a{
+    color:white;
+    text-decoration: none;
+}
+
+nav ul a:hover {
+    color:black;
+    background-color: white;
+}
+
+input[type=text] {
+    font-size: 1em;
+    
+}
+
+button {
+    font-size: 1em;
+}
+
+footer {
+    background-color: #0076c6;
+    padding: 2em;
+    font-size: 1em;
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+    color: white;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
