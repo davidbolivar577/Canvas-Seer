@@ -3,32 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
     <title>{% block title %}Template{% endblock %}</title>
     {% block style %}<link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">{% endblock %}
 </head>
 <body>
     <nav>
         <ul>
-            <li><a href="/home">Home</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/logout">Log Out</a></li>
             <li><a href="/courses">Courses</a></li>
             <li><a href="/calendar">Calendar</a></li>
             <li><a href="https://b2b0c970-8c97-44e8-bc56-a029b47c90c1.iad.login.instructure.com/?goto=https%3A%2F%2Fb2b0c970-8c97-44e8-bc56-a029b47c90c1.iad.login.instructure.com%2Fam%2Foauth2%2Falpha%2Fauthorize%3Fauthentication_provider%3D79175795-479a-4154-8335-43264065b1fb%26client_id%3Dcanvas-prod-iad%26nonce%3Db50a6a9609bfb5e8cb6be7d793be7d9bc577c262027e36fe%26org_id%3Db2b0c970-8c97-44e8-bc56-a029b47c90c1%26redirect_uri%3Dhttps%3A%2F%2Fsso.canvaslms.com%2Flogin%2Foauth2%2Fcallback%26response_type%3Dcode%26scope%3Dopenid%2520profile%2520email%26state%3DeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhYWNfaWQiOjcwMDAwMDAwMDAxNzUyLCJub25jZSI6ImI1MGE2YTk2MDliZmI1ZThjYjZiZTdkNzkzYmU3ZDliYzU3N2MyNjIwMjdlMzZmZSIsImhvc3QiOiJjYW52YXMuaW5zdHJ1Y3R1cmUuY29tIiwidGFyZ2V0X2F1dGhfcHJvdmlkZXIiOiI3OTE3NTc5NS00NzlhLTQxNTQtODMzNS00MzI2NDA2NWIxZmIiLCJleHAiOjE3NjEzNjA2NDN9.0nan3uLJiSH1V3565L-utH4GSpuOH6An7_x-sVtQZsM%26target_domain%3Dhttps%3A%2F%2Fcanvas.instructure.com&realm=/alpha">Canvas</a></li>
+            <li><a href="/signup">Sign Up</a></li>
             <li><a href="/settings">Settings</a></li>
-           <button class="sync">Sync</button>
+            <button class="sync">Sync</button>
+            
         </ul>
             
-        
+        <div class="container">{% block content %} {% endblock %}</div>
+
+{% with messages = get_flashed_messages(with_categories=true) %} {% if
+    messages %} {% for category, message in messages %} {% if category ==
+    'error' %}
+    <div class="alert alert-danger alter-dismissable fade show" role="alert">
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% else %}
+    <div class="alert alert-success alter-dismissable fade show" role="alert">
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% endif %} {% endfor %} {% endif %} {% endwith %}
+
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
             
             
         
     </nav>
     {% block body %}Template{% endblock %}
     <footer>
-        <p>Created by: ___, ___, ____, ____</p>
+        <p>Created by: Carter, Christ, David, Ethan</p>
         <a href="home">Home</a>
         <a href="calendar">Calendar</a>
         <a href="courses">Courses</a>
         <a href="settings">Settings</a>
     </footer>
+    
 </body>
 </html>
