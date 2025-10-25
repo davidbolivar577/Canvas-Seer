@@ -2,11 +2,12 @@
 
 {% block title %}Canvas Seer{% endblock %}
 
-{% block style %}<link href="{{ url_for('static', filename='styles/styles_home.css') }}" rel="stylesheet" />{% endblock %}
+{% block content %}<link rel="stylesheet" href="{{ url_for('static', filename='styles/styles_home.css') }}">{% endblock %}
 
 {% block body %}
 <!--Info in Canvas API for getting announcements-->
 <!--url:GET|/api/v1/announcements-->
+<h1>Welcome to Canvas Seer</h1>
 <section id="announcements">
     <h2>Announcements</h2>
 </section>
@@ -15,7 +16,10 @@
 <!--url:GET|/api/v1/courses
     enrollment_type Student-->
 <section id="courses">
+    
     <h2>Courses</h2>
+
+    <div id="course_container">
     <figure class="course">
         <img src="https://picsum.photos/200/200" alt="course 1 image">
         <p>course 1</p>
@@ -53,4 +57,5 @@
         <p>course 9</p>
     </figure>
 </section>
+</div>
 {% endblock %}
