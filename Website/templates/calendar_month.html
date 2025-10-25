@@ -4,12 +4,14 @@
 
 {% block body %}
 
+{% block style %}<link rel="stylesheet" href="{{ url_for('static', filename='styles/calendar_monthly_styles.css') }}">{% endblock %}
+
 {{ super() }}
 
 <div class="Calendar"></div>
 
 <h1> October 2025</h1>
-<table border="5" style="width:50%">
+<table style="width:96.5%">
     <tr class="days">
         <th>Sun</th>
         <th>Mon</th>
