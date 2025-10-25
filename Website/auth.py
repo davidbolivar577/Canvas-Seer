@@ -20,9 +20,9 @@ def sign_up():
 
 
 #debug
-@auth.route('/auth')
-def auth():
-    new_user = User(email="test@email.com",password="",first_name="Bill",last_name="Will",access_key="10706~V6ArtwADBUtD9tCYCfJkQP8neRWMyVZW2AXED7CNRWZzx9JP2PEANVBha9zDmyNW")
+@auth.route('/preauth')
+def preauth():
+    new_user = User(email="test@email.com",password="",first_name="Bill",last_name="Will",access_key="")
     db.session.add(new_user)
     db.session.commit()
     return redirect(url_for('views.home'))
