@@ -6,7 +6,6 @@ views = Blueprint('views', __name__)
 def root():
     return redirect(url_for('views.home'))
 
-#todo #6
 @views.route('/home')
 def home():
     return render_template("home.html")
@@ -53,13 +52,13 @@ def calL():
 def courses():
     return render_template("courses.html")
 
-@views.route('/courses/?')
-def courseNum(course_number):
-    return render_template(url_for('courses/?',values=course_number))
+@views.route('/courses/<course>')
+def course(course):
+    return render_template("course.html", course)
 
-@views.route('/courses/?/??')
-def module():
-    return render_template("courses/?/??.html")
+@views.route('/courses/<course>/<module>')
+def module(course, module):
+    return render_template("module.html", path = [course, module])
 
 """
 @views.route('/home')
