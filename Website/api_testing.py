@@ -1,6 +1,7 @@
 
 import requests
 import subprocess
+import json
 
 #debug
 import pprint
@@ -18,8 +19,20 @@ def get_grade_info():
 
     if response.status_code == 200:
         test_data = response.json()
-        pprint.pprint(test_data) 
+        print(type(test_data[1]))
+        for course in test_data:
+            name = course["name"]
+            id = course["id"]
+            
+        #pprint.pprint(test_data) 
+        #while():
+
+        #assignments = test_data[0]['name']
+        #grades = test_data[0]['points_possible']
+        #pprint(assignments)
+        #pprint(grades)
     else:
         print(f"Failed to retrieve data {response.status_code}")
 
 get_grade_info()
+
