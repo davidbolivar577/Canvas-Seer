@@ -1,0 +1,51 @@
+@import "styles.css";
+
+
+.profile-dropdown button {
+    background-color: #0076c6;
+    border: none;
+    color: white;
+    margin: 10px auto;
+    font-size: 2em;
+}
+
+.profile-dropdown {
+    position:relative;
+    display: inline-block;
+    text-align: center;
+    width: 100vw;
+    
+}
+
+.profile-dropdown-content {
+    display: none;
+    position: absolute;
+    width: 100vw;
+    text-shadow: 0, 0, 5px, 5px, black;
+}
+
+.profile-dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    display: block;
+    align-items: center;
+}
+
+.profile-dropdown:hover .profile-dropdown-content {
+    display: block;
+}
+
+.aboutus {
+    margin: 1em;
+}
+
+.current-API {
+    text-align:right;
+}
+
+.api-dropdown-items button {
+    background-color:#0076c6;
+    color:white;
+    border:none;
+}
+

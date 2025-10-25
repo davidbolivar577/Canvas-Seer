@@ -2,6 +2,10 @@
 
 {% block title %}Settings{% endblock %}
 
+{{ super() }}
+
+{% block style %}<link rel="stylesheet" href="{{ url_for('static', filename='styles/styles_settings.css') }}">{% endblock %}
+
 {% block body%}
 
 <div class="profile-dropdown">
@@ -10,20 +14,31 @@
         <img src="https://picsum.photos/100/100" alt="profile photo">
         <p>Name</p>
         <p>Contact</p>
+        <button class="logout">Log Out</button>
     </div>
 </div>
-<div class="aboutus-dropdown">
-    <button class="aboutus-button">About Us</button>
-    <div class="aboutus-dropdown-items">
-        <button class="api-dropdown">API</button>
-        <div class="api-dropdown-items">
-            <p>Current: ****</p>
-            <button class="delete">Delete</button>
-            <input type="text" id="addnew" name="addnew">
-            <button class="addnew">Add New</button>
-        </div>
-        <h2>Copyrights</h2>
-        <h2>Other</h2>
+
+<div class="aboutus">
+    <h2>API</h2>
+    <div class="api-dropdown-items">
+        <table>
+            <tr>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <td><p class="current-API">Current API: ****</p></td>
+                <td><button class="delete">Delete</button></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="addnew" name="addnew"></td>
+                <td><button class="addnew">Add New</button></td>
+            </tr>
+        </table>
     </div>
+    <h2>Copyrights</h2>
+    <h2>Other</h2>
+
 </div>
+
 {% endblock %}
