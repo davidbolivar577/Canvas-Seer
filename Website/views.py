@@ -37,6 +37,15 @@ def settings():
 def calendar():
     return render_template("calendar.html")
 
+@views.route('/courses')
+def courses():
+    return render_template("courses.html")
+
+@views.route('/temp_home')
+def temphome():
+    return render_template("home_template.html")
+
+
 """
 @views.route('/home')
 def home2():
