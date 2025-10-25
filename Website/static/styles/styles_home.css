@@ -1,45 +1,45 @@
-@import "styles.css";
+@import url("styles.css");
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.home_page {
+  margin:2em;
 }
 
-body {
-  background-color: #f0f2f5;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #000;
+h1 {
+  text-align:center;
+}
+h2 {
+  text-align:center;
 }
 
 #course_container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  width: 80%;
-  margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    grid-gap: 20px; /* space between items */
+    width: 80%; /* optional - keeps it centered and neat */
+    margin: 0 auto; /* center the grid */
+    padding: 20px;
 }
 
 .course {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  text-align: center;
-  padding: 10px;
-  transition: transform 0.2s ease;
+    background-color: #f8f8f8; /* optional visual style */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.2s ease-in-out;
 }
 
 .course:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .course img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
 }
 
-h2 {
-  text-align: center;
-  margin: 20px 0;
+.course p {
+    margin-top: 8px;
+    font-weight: bold;
 }
