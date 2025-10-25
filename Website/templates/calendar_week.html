@@ -2,11 +2,13 @@
 
 {% block title %}Week Calendar{% endblock %}
 
+{% block style %}<link rel="stylesheet" href="{{ url_for('static', filename='styles/styles_weekly.css') }}">{% endblock %}
+
 {% block body %}
 
 {{ super() }}
 
-<table border="1">
+<table>
   <thead>
     <tr>
       <th>all-day</th>
@@ -22,7 +24,13 @@
   <tbody>
     <tr>
       <td>12am</td>
-      <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
       <td>1am</td>
@@ -47,8 +55,7 @@
     <tr>
       <td>12:30pm</td>
       <td></td><td></td><td></td><td></td><td></td>
-      <td></td><td></td><td></td><td></td><td></td>
-      <td></td><td></td><td></td><td></td><td></td>
+      <td></td><td></td>
     </tr>
   </tbody>
 </table>

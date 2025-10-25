@@ -1,0 +1,22 @@
+@import url("styles_calendar.css");
+
+table, th, td {
+    border: 1px solid black;
+    margin: 2em;
+}
+
+table {
+    width: 96.5%;
+}
+
+th {
+    height: 4em;
+}
+
+td {
+    height: 2em;
+}
+
+tr:nth-child(odd) {
+    background-color:#0077c61e;
+}
