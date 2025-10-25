@@ -1,16 +1,18 @@
 {% extends "base.html" %}
 
 {% block title %}Calendar{% endblock %}
-
+{% block style %}<link rel="stylesheet" href="{{ url_for('static', filename='styles/styles_calendar.css') }}">{% endblock %}
 {% block body %}
 
 
-
-<a href="monthly"><button class="month">Month</button></a>
-<a href="weekly"><button class="week">Week</button></a>
-<a href="list"><button class="list">List</button></a>
+<div class="calendar-header">
+<a href="monthly">Month</a>
+<a href="weekly">Week</a>
+<a href="list">List</a>
 
 <label for="official-view">Official View</label>
 <input type="checkbox" id="official-view" name="official-view" value="official-view">
+</div>
+
 
 {% endblock %}

@@ -1,17 +1,5 @@
-@import "styles.css";
+@import url("styles_calendar.css");
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: #f8f8f8;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333333;
-
-}
 
 .calendar {
     display: grid;
