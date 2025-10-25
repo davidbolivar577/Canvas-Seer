@@ -3,26 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% block title %}Template{% endblock %}
+    <title>{% block title %}Template{% endblock %}</title>
     {% block style %}<link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">{% endblock %}
 </head>
 <body>
     <nav>
-        <a href="home"><button>Home</button></a>
-        <a href="courses"><button>Courses</button></a>
-        <a href="calendar"><button>Calendar</button></a>
-        <a href="https://b2b0c970-8c97-44e8-bc56-a029b47c90c1.iad.login.instructure.com/?goto=https%3A%2F%2Fb2b0c970-8c97-44e8-bc56-a029b47c90c1.iad.login.instructure.com%2Fam%2Foauth2%2Falpha%2Fauthorize%3Fauthentication_provider%3D79175795-479a-4154-8335-43264065b1fb%26client_id%3Dcanvas-prod-iad%26nonce%3Db50a6a9609bfb5e8cb6be7d793be7d9bc577c262027e36fe%26org_id%3Db2b0c970-8c97-44e8-bc56-a029b47c90c1%26redirect_uri%3Dhttps%3A%2F%2Fsso.canvaslms.com%2Flogin%2Foauth2%2Fcallback%26response_type%3Dcode%26scope%3Dopenid%2520profile%2520email%26state%3DeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhYWNfaWQiOjcwMDAwMDAwMDAxNzUyLCJub25jZSI6ImI1MGE2YTk2MDliZmI1ZThjYjZiZTdkNzkzYmU3ZDliYzU3N2MyNjIwMjdlMzZmZSIsImhvc3QiOiJjYW52YXMuaW5zdHJ1Y3R1cmUuY29tIiwidGFyZ2V0X2F1dGhfcHJvdmlkZXIiOiI3OTE3NTc5NS00NzlhLTQxNTQtODMzNS00MzI2NDA2NWIxZmIiLCJleHAiOjE3NjEzNjA2NDN9.0nan3uLJiSH1V3565L-utH4GSpuOH6An7_x-sVtQZsM%26target_domain%3Dhttps%3A%2F%2Fcanvas.instructure.com&realm=/alpha"><button>Canvas</button></a>
-        <input id="search-bar" placeholder="Search" list="search">
-        <datalist id="search">
-            <option value="Home">
-            <option value="Courses">
-            <option value="Canvas">
-            <option value="Settings">
-            <!--Add more as we figure out the direct links to them-->
-            <option value=""></option>
-        </datalist>
-        <button id="submit">Go</button>
-        <a href="settings"><button>Settings</button></a>
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/courses">Courses</a></li>
+            <li><a href="/calendar">Calendar</a></li>
+            <li><a href="https://b2b0c970-8c97-44e8-bc56-a029b47c90c1.iad.login.instructure.com/?goto=https%3A%2F%2Fb2b0c970-8c97-44e8-bc56-a029b47c90c1.iad.login.instructure.com%2Fam%2Foauth2%2Falpha%2Fauthorize%3Fauthentication_provider%3D79175795-479a-4154-8335-43264065b1fb%26client_id%3Dcanvas-prod-iad%26nonce%3Db50a6a9609bfb5e8cb6be7d793be7d9bc577c262027e36fe%26org_id%3Db2b0c970-8c97-44e8-bc56-a029b47c90c1%26redirect_uri%3Dhttps%3A%2F%2Fsso.canvaslms.com%2Flogin%2Foauth2%2Fcallback%26response_type%3Dcode%26scope%3Dopenid%2520profile%2520email%26state%3DeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhYWNfaWQiOjcwMDAwMDAwMDAxNzUyLCJub25jZSI6ImI1MGE2YTk2MDliZmI1ZThjYjZiZTdkNzkzYmU3ZDliYzU3N2MyNjIwMjdlMzZmZSIsImhvc3QiOiJjYW52YXMuaW5zdHJ1Y3R1cmUuY29tIiwidGFyZ2V0X2F1dGhfcHJvdmlkZXIiOiI3OTE3NTc5NS00NzlhLTQxNTQtODMzNS00MzI2NDA2NWIxZmIiLCJleHAiOjE3NjEzNjA2NDN9.0nan3uLJiSH1V3565L-utH4GSpuOH6An7_x-sVtQZsM%26target_domain%3Dhttps%3A%2F%2Fcanvas.instructure.com&realm=/alpha">Canvas</a></li>
+            <li><input type = "text" id="search-bar" placeholder="Search" list="search">
+            <datalist id="search">
+                <option value="Home">
+                <option value="Courses">
+                <option value="Canvas">
+                <option value="Settings">
+                <!--Add more as we figure out the direct links to them-->
+                <option value=""></option>
+            </datalist>
+            <button id="submit">Go</button></li>
+            <li><a href="/settings">Settings</a></li>
+        </ul>
     </nav>
     {% block body %}Template{% endblock %}
     <footer>
