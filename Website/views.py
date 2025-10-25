@@ -28,11 +28,8 @@ def signup():
     #if logged in
     return render_template("sign_up.html")
 
-@views.route('/logout')
-def logout():
-    if (login_status == False):
-        return redirect(url_for('login_page.home'))
-    return render_template("logout.html")
+
+
 
 @views.route('/settings')
 def settings():
